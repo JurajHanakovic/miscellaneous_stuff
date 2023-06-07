@@ -40,7 +40,7 @@ class PrintToFile:
 downloads_folder_path = os.path.expanduser("~/Downloads") # get the path to the Downloads folder
 file_name = str(year) + "_" + str("{:02d}".format(month)) + "_monthly_schedule.txt" # construct whole file name (with month's name)
 output_file_path = os.path.join(downloads_folder_path, file_name) # construct the output file path
-sys.stdout = PrintToFile(output_file_path) # redirect sys.stdout to write to a external file
+sys.stdout = PrintToFile(output_file_path) # redirect sys.stdout to write to an external file
 
 
 # Generating the month schedule
