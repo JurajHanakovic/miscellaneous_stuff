@@ -1,2 +1,3 @@
-*.cfg	-text
-*.txt	-text
+*.cfg			-text
+*.txt			-text
+autoexec.cfg	-text
