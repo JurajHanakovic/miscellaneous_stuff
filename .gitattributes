@@ -1,2 +1,2 @@
-*.cfg			-text
-*.txt			-text
+*.cfg binary
+*.txt -text
