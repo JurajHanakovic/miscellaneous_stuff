@@ -1,0 +1,54 @@
+==========================
+= where to copy autoexec =
+==========================
+<path_to_steam_library>\steamapps\common\Counter-Strike Global Offensive\csgo\cfg
+
+
+
+==================
+= LAUNCH OPTIONS =
+==================
+-novid -console -high -nojoy -language bananagaming +exec autoexec.cfg +sv_holiday_mode 0 -allow_third_party_software
+
+
+
+============
+= GRAPHICS =
+============
+
+in autoexec/console
+===================
+max_fps // 3fps below monitor's refresh rate
+
+
+ingame
+======
+global shadow quality // high
+model/texture detail // high
+texture streaming // disabled
+effects detail // low
+shader detail // low
+
+boost player contrast // enabled
+multicoreRendering // enabled
+MSAA // 4x
+FXAA // disabled
+
+texture filtering mode // anisotropic 16x
+wait for vertical sync // disabled
+motion blur // disabled
+triple-monitor mode // disabled
+use uber shaders // enabled
+
+
+nvidia freeStyle
+================
+* in this order
+---
+brightness&contrast
+	shadows // -50
+	gamma // 100
+color
+	vibrance // 100
+details
+	clarity // 70
