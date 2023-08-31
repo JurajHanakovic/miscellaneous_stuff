@@ -57,13 +57,39 @@ list = generate_month_schedule(year, month)
 for date, day_name in list:
 	print(f"/// {date} - {day_name} ///")
 
+# TODO: incorporate all/as-much-as-possible time-sensitive tasks directly in DR list
+# TODO: ^ call as function from DR print list, but keed separated to WEEK-lies/... section in code
+	
+	############
+	# DAY-lies #
+	############
+	print(f"06:00  wake-up")
+	print(f"w_b, bat, prep_d (c/t(+cr), vw(vit+col+cr), 1.5lwb)")
+	print(f"[c/t, vw] ms, mmed, DP&Q check")
+	print(f"bed tu, bat, tb, wght")
+	print(f"bb (hbb/cardio alternate)")
+	print(f"cool_med (cl, ret, pa_succ, fu_succ, po_aff, cl)")
+	print(f"c_sho (+phcu), ec, ncl, deo, cr")
+	print(f"ChE_duct, ice_p")
+	print(f"|| work/DTD block + [w]; stretch ||")
+	print(f"12:00  [lunch] + soc/quiet, tb/chg")
+	print(f"powernap (10-30min)")
+	print(f"|| work/DTD block + [w]; stretch ||")
+	print(f"15:00  [prot/(de)c+snack/protBar], tb/chg")
+	print(f"|| work/DTD block + [w]; stretch ||")
+	print(f"18:00  [din] + soc/tv, tb/chg")
+	print(f"|| relax/DTD block + [wb finish]; sg ||")
+	print(f"mmed, bat, tb, deo")
+	print(f"charge mp, adb + sleep")
+	print(f"======")
+
+	
 	#############
 	# WEEK-lies #
 	#############
 	# 17:00 massage (every other week) // currently postponed
 	# if day_name == "Thursday" and massage_next_week == 1:
 	#     print(f"* 17:00 massage")
-	#     print(f"===")
 	#     massage_next_week = 0
 	# elif day_name == "Thursday":
 	#     massage_next_week = 1
@@ -72,9 +98,9 @@ for date, day_name in list:
 	if day_name == "Thursday":
 		print(f"* EGS free games (17:00+)")
 
-	# clean office space & peripherals
-	if day_name == "Friday":
-		print(f"* office space & peripherals cleaning")
+	# clean office space & peripherals // currently postponed
+	# if day_name == "Friday":
+	# 	print(f"* office space & peripherals cleaning")
 
 	# sunday cleaning (personal room/office & body)
 	if day_name == "Sunday":
@@ -87,21 +113,21 @@ for date, day_name in list:
 	# MONTH-lies #
 	##############
 	# invoice
-	if int(date[:2]) == 1:
-		print(f"* create & send invoice")
+	# if int(date[:2]) == 1:
+	# 	print(f"* create & send invoice")
 
 	# UEfreebies (1st Thursday after 7th of each month)
 	if day_name == "Thursday" and (6 < int(date[:2]) < 14):
 		print("* UE monthly freebies")
 
 	# cashflow payments
-	if int(date[:2]) == 15:
-		print(f"* cashflow payments")
+	# if int(date[:2]) == 15:
+	# 	print(f"* cashflow payments")
 
 	# 3rd last day of the month tasks
 	if int(date[:2]) == num_days-2:
 		print(f"* big flat cleaning")
-		print(f"	vacuum, dust, ...")
+		print(f"	vacuum, dust, karim, ...")
 		print(f"* big pc&peripherals cleaning")
 		print(f"	displays, keyboards, mice, gamepads, pc fans, ...")
 
@@ -138,28 +164,7 @@ for date, day_name in list:
 		print(f"	Plan - 0 - X/Y")
 		print(f"	personal yearly retrospective session")
 
-
-	############
-	# DAY-lies #
-	############
-	print(f"=== DR ===")
-	print(f"06:00  wake-up")
-	print(f"w_boil, bat, prep drinks (c/t(+cr), vw(vit+col(+cr)), 1.5lwb)")
-	print(f"[c/t, vw] ms, mmed, DP&Q check")
-	print(f"bed tu, bat, tb")
-	print(f"bb (hbb/cardio alternate)")
-	print(f"c_sho (+hcu), ec, nc, deo, cr")
-	print(f"cool_med (clear, retro, past succ, fut succ, pos aff, clear)")
-	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"12:00  [lunch] + soc/quiet, tb/chg")
-	print(f"powernap (10-30min)")
-	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"15:00  [prot/(de)c+snack/protBar], tb/chg")
-	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"18:00  [din] + soc/tv, tb/chg")
-	print(f"|| relax/DTD block + [wb finish]; sg ||")
-	print(f"mmed, bat, tb, deo")
-	print(f"charge mp, audiob + sleep")
-	print(f"==========")
+	
+	# spacing
 	print(f"")
 	print(f"")
