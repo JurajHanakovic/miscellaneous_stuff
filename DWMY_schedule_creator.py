@@ -64,21 +64,21 @@ for date, day_name in list:
 	# DAY-lies #
 	############
 	print(f"06:00  wake-up")
-	print(f"w_b, bat, prep_d (c/t(+cr), vw(vit+col+cr), 1.5lwb)")
-	print(f"[c/t, vw] ms, mmed, DP&Q check")
+	print(f"w_b, bat, prep_d (c, t, vw(vit+col))")
+	print(f"[c,t,vw] ms, mmed, DP&Q check")
 	print(f"bed tu, bat, tb, wght")
-	print(f"bb (hbb/cardio alternate)")
-	print(f"cool_med (cl, ret, pa_succ, fu_succ, po_aff, cl)")
+	print(f"bb (hbb/cardio alternate) + [w]")
+	print(f"c_med (cl, ret, pa_succ, fu_succ, po_aff, cl)")
 	print(f"c_sho (+phcu), ec, ncl, deo, cr")
 	print(f"ChE_duct, ice_p")
 	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"12:00  [lunch] + soc/quiet, tb/chg")
+	print(f"12:00  [w&lunch] + soc/quiet, tb/chg")
 	print(f"powernap (10-30min)")
 	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"15:00  [prot/(de)c+snack/protBar], tb/chg")
+	print(f"15:00  [prot/(de)c/t+snack/protBar], tb/chg")
 	print(f"|| work/DTD block + [w]; stretch ||")
-	print(f"18:00  [din] + soc/tv, tb/chg")
-	print(f"|| relax/DTD block + [wb finish]; sg ||")
+	print(f"18:00  [w&din] + soc/tv, tb/chg")
+	print(f"|| relax/DTD block + [w]; sg ||")
 	print(f"mmed, bat, tb, deo")
 	print(f"charge mp, adb + sleep")
 	print(f"======")
@@ -106,7 +106,7 @@ for date, day_name in list:
 	if day_name == "Sunday":
 		print(f"* personal room/office cleaning")
 		print(f"	vacuum, dust, peripherals, trash out")
-		print(f"* fbhcu, wh bath, nc, ec, fbcr")
+		print(f"* fbhcu, wh bath/shower, nc, ec, fbcr")
 
 
 	##############
@@ -121,8 +121,9 @@ for date, day_name in list:
 		print("* UE monthly freebies")
 
 	# cashflow payments
-	# if int(date[:2]) == 15:
-	# 	print(f"* cashflow payments")
+	if int(date[:2]) == 15:
+		print(f"* cashflow payments")
+		print(f"	rent")
 
 	# 3rd last day of the month tasks
 	if int(date[:2]) == num_days-2:
@@ -142,8 +143,7 @@ for date, day_name in list:
 		print(f"	training - check exercises progress")
 		print(f"	photos after training; photos save & rip")
 		print(f"* review big quests/projects & prep calendar for next month")
-		print(f"	Habits, BB, FF")
-		print(f"	Plan - X/D/W/M")
+		print(f"	DR, Habits, BB, FF")
 
 
 	#############
@@ -160,9 +160,8 @@ for date, day_name in list:
 
 	# end of the year personal stuff recap & prep for new year (31.12.)
 	if int(date[:2]) == 31 and month == 12:
-		print(f"* check & update yearly quests")
-		print(f"	Plan - 0 - X/Y")
-		print(f"	personal yearly retrospective session")
+		print(f"* check & update big Plan-X quests")
+		print(f"* personal yearly retrospective session")
 
 	
 	# spacing
