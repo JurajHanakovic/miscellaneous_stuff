@@ -53,6 +53,9 @@ list = generate_month_schedule(year, month)
 for date, day_name in list:
 	print(f"/// {date} - {day_name} ///")
 
+# TODO: add daylight-savings-time(&back) change
+#	last march week 2:00 → 3:00 -> CES(ummer)T
+#	last october week 3:00 → 2:00 -> CET
 # TODO: incorporate all/as-much-as-possible time-sensitive tasks directly in DR list
 # TODO: ^ call as function from DR print list, but keed separated to WEEK-lies/... section in code
 	
@@ -93,7 +96,7 @@ for date, day_name in list:
 	# clean office space & peripherals // currently postponed
 	if day_name == "Friday":
 		print(f"'office space & peripherals cleaning")
-		print(f"^get&note info about next week's shifts")
+		print(f"^next week's shifts info + edit alarms&leds")
 
 	# sunday cleaning (personal room/office & body)
 	if day_name == "Sunday":
@@ -108,9 +111,13 @@ for date, day_name in list:
 	if day_name == "Thursday" and (6 < int(date[:2]) < 14):
 		print("'UE monthly freebies")
 
+	# new HumbleBundleChoice games (1st Tuesday of each month)
+	if day_name == "Tuesday" and (int(date[:2]) < 8):
+		print("'19:00+ new HumbleBundleChoice games")
+
 	# cashflow payments
 	if int(date[:2]) == 20:
-		print(f"^cashflow payments")
+		print(f"*cashflow payments")
 
 	# 3rd last day of the month tasks
 	if int(date[:2]) == num_days-2:
@@ -122,6 +129,10 @@ for date, day_name in list:
 	# 2nd last day of the month tasks
 	if int(date[:2]) == num_days-1:
 		print(f"%R&R")
+		print(f"^KrivanDochadzka check thoroughly")
+		print(f"	(send mail asking to add NV manually")
+		print(f"'review big quests/projects & prep new schedule")
+		print(f"	DR, Habits, BB, FF, ...")
 
 	# last day of the month tasks
 	if int(date[:2]) == num_days:
@@ -129,8 +140,6 @@ for date, day_name in list:
 		print(f"	weighing; photos before training")
 		print(f"	training - check exercises progress")
 		print(f"	photos after training; photos save & rip")
-		print(f"'review big quests/projects & prep new schedule")
-		print(f"	DR, Habits, BB, FF, ...")
 
 
 	#############
@@ -143,12 +152,26 @@ for date, day_name in list:
 		print(f"	best tv shows of ...")
 		print(f"	best movies of ...")
 		print(f"	best of year ...")
-		print(f"('Predplatenka Telekom -- refill credit")
-		print(f"('check/change clothes in car trunk")
+		print(f"'Easy Telekom -- refill credit")
+		print(f"'O2 -- refill credit")
+		print(f"'check/change clothes in car trunk")
+
+	# summer tyre change (1st monday of april)
+	if month == 4 and day_name == "Monday" and (1 < int(date[:2]) < 7):
+		print(f"*summer tyre change org")
 
 	# mid-year misc (2nd/3rd saturday of july; after 14th)
-	if month == 1 and day_name == "Saturday" and (14 < int(date[:2]) < 23):
-		print(f"('Predplatenka Telekom -- refill credit")
+	if month == 7 and day_name == "Saturday" and (14 < int(date[:2]) < 23):
+		print(f"'Easy Telekom -- refill credit")
+
+	# winter tyre change + anti-freeze wiper fluid buy (1st monday of november)
+	if month == 11 and day_name == "Monday" and (1 < int(date[:2]) < 7):
+		print(f"*winter tyre change org")
+		print(f"*anti-freeze wiper fluid refill")
+
+	# parking permit renew - notified 1 day before permit expiration (09.11.)
+	if int(date[:2]) == 8 and month == 11:
+		print(f"'parking permit renew")
 
 	# end of the year personal stuff recap & prep for new year (31.12.)
 	if int(date[:2]) == 31 and month == 12:
